@@ -13,6 +13,7 @@ html {
 }
 
 body {
+    min-width: 320px;
     min-height: 100%;
     width: 100%;
 }
@@ -48,8 +49,6 @@ body, input, textarea, a, button, ul, h1, h2, h3, h4, h5, h6 {
 }
 
 .language {
-    font-family: 'Inter';
-    font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 140%;
@@ -133,8 +132,6 @@ body, input, textarea, a, button, ul, h1, h2, h3, h4, h5, h6 {
 }
 
 .hero p {
-    font-family: 'Inter';
-    font-style: normal;
     font-weight: 400;
     font-size: 22px;
     line-height: 130%;
@@ -170,8 +167,6 @@ body, input, textarea, a, button, ul, h1, h2, h3, h4, h5, h6 {
     background-color: #0962E8;
     border-radius: 8px;
 
-    font-family: 'Inter';
-    font-style: normal;
     font-weight: 500;
     font-size: 18px;
     line-height: 140%;
@@ -193,4 +188,62 @@ body, input, textarea, a, button, ul, h1, h2, h3, h4, h5, h6 {
     color: #0962E8;
     background-color: #EFF9FF;
     transition: .3s background-color ease-in, .1s color ease-in;
+}
+
+.features {
+    margin-top: -100px;
+}
+
+.features .container {
+    display: flex;
+    flex-wrap: row nowrap;
+    gap: 20px;
+}
+
+.feature {
+    background: #FFFFFF;
+    box-shadow: 6px 4px 12px rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+
+    padding: 20px;
+    padding-bottom: 30px;
+    padding-top: 22px;
+
+    flex-grow: 1;
+
+    position: relative;
+}
+.feature_icon {
+    position: absolute;
+    right: 22px;
+    top: 22px;
+
+    min-width: 39px;
+    min-height: 39px;
+    max-width: 39px;
+    max-height: 39px;
+
+    background-color: #EFF9FF;
+    border-radius: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: .3s all;
+}
+.feature_icon span {
+    color: #0962E8;
+    font-size: 24px;
+
+    transition: .3s all;
+}
+
+.feature_text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    color: #29374E;
+
+    transition: .3s all;
 }
