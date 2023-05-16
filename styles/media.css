@@ -41,6 +41,54 @@
         width: 100%;
         min-width: 200px;
     }
+    .worth .container {
+        display: flex;
+        flex-flow: column nowrap;
+    }
+    .worth_info {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+
+        margin-bottom: 15px;
+    }
+    .worth_info h2 {
+        margin-bottom: 15px;
+        text-align: center;
+    }
+    .worth_info p {
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    .worth_feature {
+        background-color: #FFFFFF;
+        box-shadow: 6px 4px 12px rgba(0, 0, 0, 0.05);
+        border-radius: 20px;
+
+        position: relative;
+
+        display: flex;
+        align-items: center;
+
+        padding-right: 75px;
+    }
+    .worth_icon {
+        position: absolute;
+        right: 22px;
+        top: 22px;
+    
+        min-width: 39px;
+        min-height: 39px;
+        max-width: 39px;
+        max-height: 39px;
+    
+        border-radius: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 @media screen and (max-width: 850px) {
@@ -101,9 +149,24 @@
     .feature_text {
         font-size: 15px;
     }
+    .worth_text {
+        font-size: 14px;
+        width: 100%;
+    }
     .product {
         padding: 30px 20px;
         padding-bottom: 0;
+    }
+    .worth_feature {
+        padding-top: 45px;
+        padding-right: 15px;
+        align-items: flex-start;
+    }
+    .worth_icon {
+        left: 25px;
+        top: -5px;
+        background-color: #EFF9FF;
+        font-size: 24px;
     }
 }
 
@@ -114,7 +177,6 @@
     .info_image img {
         margin-left: 550px;
     }
-
     .info_text {
         margin-right: -350px;
         min-width: 284px;
@@ -153,6 +215,9 @@
     .features .container {
         gap: 20px 15px;
     }
+    .worth_features_wrapper {
+        gap: 20px 15px;
+    }
     .hero {
         padding-bottom: 0;
     }
@@ -164,7 +229,7 @@
     }
     .feature {
         padding-top: 25px;
-        padding: 20px;
+        padding: 20px 15px;
         padding-bottom: 20px;
     }
     .feature_text {
@@ -205,6 +270,19 @@
     .product_text {
         font-size: 13px;
     }
+    .worth_feature {
+        padding: 15px 10px;
+        padding-top: 45px;
+    }
+    .worth_text br {
+        display: none;
+    }
+    .worth_info p br {
+        display: none;
+    }
+    .worth_info h2 {
+        font-size: 28px;
+    }
 }
 
 @media screen and (max-width: 425px) {
@@ -240,7 +318,7 @@
     .hero h1 span {
         margin-left: 5px;
     }
-    .info_button {
+    .info_button, .worth_button {
         justify-content: center;
         width: 100%;
     }
@@ -250,6 +328,9 @@
     .feature_icon {
         right: calc(100% - 57px);
         top: -5px;
+    }
+    .worth_info h2 {
+        font-size: 24px;
     }
 }
 
@@ -264,19 +345,27 @@
         padding: 20px;
         padding-bottom: 20px;
     }
-    .features .container {
+    .features .container, .worth_features_wrapper {
         display: flex;
         flex-flow: column nowrap;
     }
-    .feature_text {
+    .worth_feature {
+        padding: 20px;
+        padding-bottom: 20px;
+    }
+    .feature_text, .worth_text {
         padding-right: 40px;
     }
     .feature_text br {
         display: none;
     }
     .feature_icon {
-        right: 22px;
+        right: 12px;
         top: -5px;
+    }
+    .worth_icon {
+        left: calc(100% - (12px + 39px));
+        top: -5px;  
     }
     .product {
         grid-template-columns: 1fr 95px;

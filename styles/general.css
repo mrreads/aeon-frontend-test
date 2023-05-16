@@ -157,6 +157,7 @@ body, input, textarea, a, button, ul, h1, h2, h3, h4, h5, h6 {
 }
 
 .info_image {
+    user-select: none;
     pointer-events: none;
     margin-left: 50px;
 }
@@ -165,7 +166,7 @@ body, input, textarea, a, button, ul, h1, h2, h3, h4, h5, h6 {
     z-index: 1;
 }
 
-.info_button {
+.info_button, .worth_button {
     background-color: var(--base-color);
     border-radius: 8px;
 
@@ -186,7 +187,7 @@ body, input, textarea, a, button, ul, h1, h2, h3, h4, h5, h6 {
     transition: .2s all ease-out;
 }
 
-.info_button:hover {
+.info_button:hover, .worth_button:hover {
     color: var(--base-color);
     background-color: #EFF9FF;
     transition: .3s background-color ease-in, .1s color ease-in;
@@ -258,7 +259,6 @@ body, input, textarea, a, button, ul, h1, h2, h3, h4, h5, h6 {
 
 .products {
     margin-top: 115px;
-    margin-bottom: 115px;
 }
 
 .products h2 {
@@ -328,3 +328,68 @@ body, input, textarea, a, button, ul, h1, h2, h3, h4, h5, h6 {
     width: 100%;
     height: 100%;
 }
+
+/* Представляем ценность для броĸера и банĸа */
+
+.worth {
+    margin-top: 115px;
+    margin-bottom: 115px;
+}
+
+.worth .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.worth_info h2 {
+    font-weight: 500;
+    font-size: 38px;
+    line-height: 130%;
+    letter-spacing: -0.03em;
+    color: #29374E;
+
+    margin-bottom: 20px;
+}
+
+.worth_info h2 span {
+    color: var(--base-color);
+}
+
+.worth_info p {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 140%;
+    color: #1E2837;
+
+    margin-bottom: 35px;
+}
+
+.worth_features_wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+}
+
+.worth_feature {
+    padding: 15px;
+
+    gap: 15px;
+}
+
+.worth_icon {
+    font-size: 36px;
+    color: #0962E8;
+
+    transition: .3s all;
+}
+
+.worth_text {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 140%;
+    color: #29374E;
+}
+
+
