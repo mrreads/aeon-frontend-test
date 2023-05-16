@@ -72,7 +72,7 @@ body, input, textarea, a, button, ul, h1, h2, h3, h4, h5, h6 {
 }
 
 .language.active {
-    color: #0962E8;
+    color: var(--base-color);
 }
 
 .language_background {
@@ -92,6 +92,7 @@ body, input, textarea, a, button, ul, h1, h2, h3, h4, h5, h6 {
 .language_wrapper[data-lang='en'] .language_background {
     right: 0;
 }
+
 .language_wrapper[data-lang='ru'] .language_background {
     right: calc(26px + 15px);
 }
@@ -159,12 +160,13 @@ body, input, textarea, a, button, ul, h1, h2, h3, h4, h5, h6 {
     pointer-events: none;
     margin-left: 50px;
 }
+
 .info_image img {
     z-index: 1;
 }
 
 .info_button {
-    background-color: #0962E8;
+    background-color: var(--base-color);
     border-radius: 8px;
 
     font-weight: 500;
@@ -185,10 +187,12 @@ body, input, textarea, a, button, ul, h1, h2, h3, h4, h5, h6 {
 }
 
 .info_button:hover {
-    color: #0962E8;
+    color: var(--base-color);
     background-color: #EFF9FF;
     transition: .3s background-color ease-in, .1s color ease-in;
 }
+
+/* Блок с карточками */
 
 .features {
     margin-top: -100px;
@@ -213,6 +217,7 @@ body, input, textarea, a, button, ul, h1, h2, h3, h4, h5, h6 {
 
     position: relative;
 }
+
 .feature_icon {
     position: absolute;
     right: 22px;
@@ -232,8 +237,9 @@ body, input, textarea, a, button, ul, h1, h2, h3, h4, h5, h6 {
 
     transition: .3s all;
 }
+
 .feature_icon span {
-    color: #0962E8;
+    color: var(--base-color);
     font-size: 24px;
 
     transition: .3s all;
@@ -246,4 +252,79 @@ body, input, textarea, a, button, ul, h1, h2, h3, h4, h5, h6 {
     color: #29374E;
 
     transition: .3s all;
+}
+
+/* Ключевые продкуты для инвестиций */
+
+.products {
+    margin-top: 115px;
+    margin-bottom: 115px;
+}
+
+.products h2 {
+    font-weight: 500;
+    font-size: 38px;
+    line-height: 130%;
+    text-align: center;
+    letter-spacing: -0.03em;
+    color: #29374E;
+
+    margin-bottom: 45px;
+}
+
+.products h2 span {
+    color: var(--base-color);
+}
+
+.products_wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px 20px;    
+}
+
+.product {
+    overflow: hidden;
+    display: grid;
+    grid-template-areas: "title image" 
+                        "text image";
+    grid-template-rows: min-content 1fr;
+    gap: 10px 35px;
+
+    background: #E9F6FF;
+    border-radius: 30px;
+    padding: 30px;
+    padding-bottom: 0;
+    padding-top: 35px;
+
+    width: 100%;
+    transition: .3s all;
+}
+
+.product_title {
+    min-width: 190px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 140%;
+
+    grid-area: title;
+}
+
+.product_text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    grid-area: text;
+    padding-bottom: 15px;
+}
+
+.product_image {
+    grid-area: image;
+    transition: .3s all;
+}
+
+.product_image img {
+    filter: drop-shadow(8px -8px 16px rgba(0, 0, 0, 0.06));
+    min-width: 200px;
+    width: 100%;
+    height: 100%;
 }

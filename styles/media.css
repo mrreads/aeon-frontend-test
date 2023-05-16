@@ -30,6 +30,43 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
+    .products {
+        margin-top: 175px;
+    }
+    .product {
+        gap: 10px 15px;
+    }
+    .product_image img {
+        height: auto;
+        width: 100%;
+        min-width: 200px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .hero {
+        padding-bottom: 225px;
+    }
+    .products_wrapper {
+        gap: 50px 10px;
+        grid-template-columns: 1fr;
+    }
+    .product {
+        height: 250px;
+        position: relative;
+        overflow: visible;
+        grid-template-columns: 1fr 240px;
+    }
+    .product_image {
+        max-width: 170px;
+        position: absolute;
+        right: 25px;
+        bottom: 0;
+
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -63,6 +100,10 @@
     }
     .feature_text {
         font-size: 15px;
+    }
+    .product {
+        padding: 30px 20px;
+        padding-bottom: 0;
     }
 }
 
@@ -132,6 +173,37 @@
     .feature_icon {
         right: 15px;
         top: -5px;
+    }
+    .products {
+        margin-top: 150px;
+    }
+    .product {
+        height: auto;
+        grid-template-columns: 1fr 120px;
+        padding: 25px 15px;
+        padding-bottom: 0;
+    }
+    .product_title {
+        min-width: auto;
+    }
+    .product_image {
+        position: static;
+    }
+    .product_image img {
+        object-fit: contain;
+        min-width: unset;
+    }
+    .products h2 {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 130%;
+        letter-spacing: -0.03em;
+    }
+    .product_title {
+        font-size: 16px;
+    }
+    .product_text {
+        font-size: 13px;
     }
 }
 
@@ -205,5 +277,16 @@
     .feature_icon {
         right: 22px;
         top: -5px;
+    }
+    .product {
+        grid-template-columns: 1fr 95px;
+    }
+    .product_image {
+        position: relative;
+        right: 0;
+
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
     }
 }
